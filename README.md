@@ -8,6 +8,15 @@ Run `node scripts/preview.mjs` from this directory, then visit **http://127.0.0.
 
 ## Publish on GitHub Pages
 
+This repository is deployed at **https://puspmish3.github.io/my_profile/**.
+Pages must use **GitHub Actions**, not **Deploy from a branch**. Publishing the
+repository root shows this README instead of the portfolio in `site/`.
+The existing workflow uploads `site/` as the website root.
+
+For future updates, commit and push to `main`; the workflow publishes automatically.
+If you edit `scripts/build.py`, first run `python scripts/build.py` and commit the
+generated HTML too. Check the repository's Actions tab for deployment status.
+
 1. Create a **public** GitHub repository. Use `YOUR-USERNAME.github.io` for your main profile site, or any repository name for a project site.
 2. Upload `site/`, `.github/`, `scripts/`, `.gitignore`, and this README. Preserve their directory structure. The original Word documents are not needed for hosting.
 3. In the repository, open **Settings → Pages → Build and deployment → Source → GitHub Actions**.
@@ -16,7 +25,7 @@ Run `node scripts/preview.mjs` from this directory, then visit **http://127.0.0.
 
 GitHub Free supports Pages from public repositories. Instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-The current GitHub CLI account needs reauthentication before command-line publishing: run `gh auth login -h github.com` in your own terminal. Do not place access tokens in this repository.
+If GitHub CLI authentication expires, run `gh auth login -h github.com` in your own terminal. Do not place access tokens in this repository.
 
 ## Edit the site
 
