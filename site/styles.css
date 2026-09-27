@@ -4,4 +4,22 @@
 @media(max-width:1000px){.wrap{width:calc(100% - 56px)}.hero{gap:38px}.hero h1{font-size:49px}.portrait{height:480px}.certs{gap:12px}.cert{gap:7px}.cert img{width:42px}.nav{gap:20px}.about-grid,.experience-grid{gap:40px}.metric{padding:0 18px}.metric strong{font-size:34px}.case-title-grid{gap:35px}.article-layout{grid-template-columns:170px 1fr;gap:35px}}
 @media(max-width:720px){.wrap{width:calc(100% - 40px)}.header{height:75px;position:relative}.brand{font-size:13px}.menu{display:block;border:1px solid var(--line);background:transparent;border-radius:4px;padding:7px 11px;font-size:12px}.nav{display:none;position:absolute;top:65px;left:0;right:0;padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:5px;z-index:5;box-shadow:0 10px 20px #172c3210}.nav.open{display:flex;flex-direction:column;align-items:stretch;gap:16px}.hero{grid-template-columns:1fr;padding:40px 0 25px;gap:33px}.hero h1{font-size:48px;letter-spacing:-1.7px;max-width:500px}.hero-description{font-size:15px}.certs{gap:24px}.portrait-frame{max-width:460px;width:100%;margin:auto;padding-left:10px}.portrait{height:440px;border-radius:85px 5px 5px 5px}.portrait-note{left:0;bottom:40px}.industries{flex-wrap:wrap;justify-content:flex-start;gap:17px 23px;padding-bottom:27px}.industries span:first-child{max-width:none;width:100%}.industries b{font-size:13px}.metrics{grid-template-columns:1fr 1fr;padding:25px 10px;gap:25px 0}.metric{padding:0 16px}.metric:nth-child(2){border:0}.metric strong{font-size:34px}.metric span{font-size:10px}.section{padding:56px 0}.section-head{display:block}.section h2{font-size:35px}.section-head p{max-width:100%}.project-grid{grid-template-columns:1fr;gap:23px}.card-image{height:225px}.card-body{padding:23px}.card-body h3{font-size:27px}.about-grid,.experience-grid{grid-template-columns:1fr;gap:30px}.expertise{gap:25px}.expertise h3{font-size:15px}.contact{padding:30px;display:block;margin-bottom:35px}.contact h2{font-size:32px}.contact .button{margin-top:15px}.footer{flex-direction:column;gap:12px}.case-hero{padding-top:28px}.back{margin-bottom:24px}.case-title-grid{grid-template-columns:1fr;gap:7px}.case-title-grid h1{font-size:43px}.case-meta{display:flex;gap:28px;border-left:0;padding-left:0;flex-wrap:wrap}.case-cover{height:260px}.article-layout{display:block;padding-top:37px}.article-nav{position:static;display:flex;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:32px;padding-bottom:15px}.article-nav p{width:100%;margin:0}.article-nav a{padding:0;font-size:11px}.flow{padding:18px}.flow-steps{grid-template-columns:1fr 1fr;gap:17px}.flow-step:nth-child(2):after{display:none}.results-table{font-size:11px}.results-table td,.results-table th{padding:12px 7px}.next-project strong{font-size:25px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+/* A compact identity-first hero for phones; desktop rules remain unchanged. */
+@media(max-width:720px){
+  .hero{gap:0;padding:28px 0 25px;text-align:center}
+  .hero > div:first-child{display:contents}
+  .hero .intro-name{grid-row:1;font-size:23px;line-height:1.3;margin:0 0 8px}
+  .hero > div:first-child > .eyebrow{grid-row:2;justify-content:center;font-size:9px;letter-spacing:1.6px;margin-bottom:20px}
+  .hero > div:first-child > .eyebrow:before{display:none}
+  .hero .portrait-frame{grid-row:3;width:180px;max-width:100%;padding:0;margin:0 auto 20px}
+  .hero .portrait-frame:after,.hero .portrait-note{display:none}
+  .hero .portrait{width:180px;height:190px;border-radius:70px 6px 6px 6px;object-position:center 28%}
+  .hero h1{grid-row:4;font-size:30px;line-height:1.15;letter-spacing:-.8px;margin:0 0 12px;max-width:none}
+  .hero-description{grid-row:5;font-size:14px;line-height:1.65;max-width:360px;margin:0 auto 18px;text-wrap:pretty}
+  .hero .certs{grid-row:6;display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:380px;margin:0 auto;padding-top:16px;text-align:left}
+  .hero .cert{gap:8px;min-width:0;font-size:9px}
+  .hero .cert strong{font-size:10px}
+  .hero .cert img{width:44px;height:46px;flex-shrink:0}
+  .hero .actions{grid-row:7;justify-content:center;gap:15px 20px;margin:22px 0 0}
+}
 @media(max-width:720px){html:not(.js) .header{height:auto;flex-wrap:wrap;padding:18px 0}html:not(.js) .menu{display:none}html:not(.js) .nav{display:flex;position:static;flex-wrap:wrap;box-shadow:none;border:0;padding:0}}
