@@ -41,7 +41,14 @@ The site uses relative links and works both at a domain root and under a reposit
 
 Profile and career details come from the supplied professional profile; AI project descriptions and metrics come from `Project_Highlights_Summary.docx`. No client identities have been inferred for the four AI projects. Career dates are preserved, including the overlapping 2017 roles. Conceptual workflow graphics illustrate the supplied descriptions rather than asserting implementation details not in the source. Confirm any changes to current-role dates and reported outcomes before future updates.
 
-The downloadable profile is the supplied PDF, including its contact information. The website displays the supplied professional email and LinkedIn link.
+The downloadable profile is a designed, three-page PDF with a portrait, career summary, certification badges, education and credentials, and four illustrated AI project summaries with conceptual workflows. Both profile links download `Puspamitra-Mishra-Profile.pdf`. Contact details and credentials are drawn from the supplied professional profile; no additional licenses are asserted.
+
+### Rebuild the downloadable profile
+
+Install the optional authoring dependencies once: `python -m pip install -r scripts/requirements-pdf.txt`.
+Run `python scripts/build-profile.py` to rebuild the website and PDF. It writes a review copy to `output/pdf/` and the publishable file to `site/assets/puspamitra-mishra-profile.pdf`. Commit the generated HTML and the asset PDF; hosting needs no Python packages. Project titles, metrics, and workflows are shared with `scripts/build.py`; the condensed career and project narrative copy is maintained in `scripts/build-profile.py`.
+
+For PDF verification, install `pypdf` and `pymupdf`, then run `python scripts/check-profile.py`. It checks content, images, page count, and links, and renders all pages into `qa/pdf/` for visual review. With the preview server and optional Playwright dependency available, run `node scripts/check-profile-download.cjs` to verify both downloads at desktop and mobile widths.
 
 ## Photography
 

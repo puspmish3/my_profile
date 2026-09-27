@@ -1,5 +1,6 @@
 .tools/
 qa/
+output/
 __pycache__/
 *.docx
 *.pdf
