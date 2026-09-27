@@ -1,0 +1,7 @@
+.tools/
+qa/
+__pycache__/
+*.docx
+*.pdf
+/*.png
+!site/assets/*.pdf
