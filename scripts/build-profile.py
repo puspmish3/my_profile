@@ -61,7 +61,8 @@ def footer(number):
     c.setFont('Helvetica', 8)
     c.setFillColor(HexColor(MUTED))
     c.drawRightString(576, 23, f'{number} / 3')
-    c.linkURL(WEB, (36, 42, 380, 58), relative=0)
+    # Footer name only. A wider rect overlaps the contact line and steals the LinkedIn link.
+    c.linkURL(WEB, (36, 18, 230, 32), relative=0)
     c.showPage()
 
 

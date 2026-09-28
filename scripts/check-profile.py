@@ -32,6 +32,16 @@ assert any(uri.startswith(published + 'projects/') for uri in uris), 'Missing pu
 assert 'https://puspmish3.github.io/' not in '\n'.join(uris), 'Old GitHub Pages link remains'
 assert 'https://www.credly.com/badges/07dc9b54-49b2-461e-a9d6-54759287af67/public_url' in uris
 assert 'https://www.credly.com/badges/764b629f-2a50-4570-b988-5cd7cc30ea04' in uris
+linkedin = 'https://www.linkedin.com/in/puspamitra-mishra-6b186b29/'
+assert linkedin in uris, 'Missing LinkedIn link'
+doc = pymupdf.open(profile)
+page = doc[0]
+hits = page.search_for('LinkedIn')
+assert hits, 'LinkedIn text not found'
+for hit in hits:
+    links = [link for link in page.get_links() if pymupdf.Rect(link['from']).intersects(hit)]
+    assert links, 'LinkedIn text has no link'
+    assert all(link.get('uri') == linkedin for link in links), links
 normalized = ' '.join(content.split())
 assert '$48M' in normalized and 'Saved through AI-led transformations across industries' in normalized
 assert 'Cloud spend saved through modernization' in normalized
