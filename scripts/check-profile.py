@@ -18,6 +18,24 @@ for expected in ['Puspamitra Mishra', 'MetLife', 'Citigroup', 'Citibank', 'CVS H
 assert len(reader.pages[0].images) >= 3, 'Missing portrait or badges'
 assert all(len(page.images) >= 2 for page in reader.pages[1:]), 'Missing project photos'
 assert all(page.get('/Annots') for page in reader.pages), 'Missing clickable links'
+uris = []
+for page in reader.pages:
+    if page.get('/Annots'):
+        for annot in page['/Annots']:
+            obj = annot.get_object()
+            action = obj.get('/A')
+            if action and action.get('/URI'):
+                uris.append(str(action['/URI']))
+published = 'https://myprofile.puspamitramishra.fyi/'
+assert published in uris, 'Missing published profile link'
+assert any(uri.startswith(published + 'projects/') for uri in uris), 'Missing published case-study links'
+assert 'https://puspmish3.github.io/' not in '\n'.join(uris), 'Old GitHub Pages link remains'
+assert 'https://www.credly.com/badges/07dc9b54-49b2-461e-a9d6-54759287af67/public_url' in uris
+assert 'https://www.credly.com/badges/764b629f-2a50-4570-b988-5cd7cc30ea04' in uris
+normalized = ' '.join(content.split())
+assert '$48M' in normalized and 'Saved through AI-led transformation' in normalized
+assert 'Cloud spend saved through modernization' in normalized
+assert 'Engineers led through transformation' in normalized
 out = ROOT / 'qa' / 'pdf'
 out.mkdir(parents=True, exist_ok=True)
 doc = pymupdf.open(profile)

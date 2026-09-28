@@ -8,7 +8,7 @@ Run `node scripts/preview.mjs` from this directory, then visit **http://127.0.0.
 
 ## Publish on GitHub Pages
 
-This repository is deployed at **https://puspmish3.github.io/my_profile/**.
+This repository is published at **https://myprofile.puspamitramishra.fyi/**.
 Pages must use **GitHub Actions**, not **Deploy from a branch**. Publishing the
 repository root shows this README instead of the portfolio in `site/`.
 The existing workflow uploads `site/` as the website root.

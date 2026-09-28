@@ -22,7 +22,9 @@ ASSETS = ROOT / 'site' / 'assets'
 OUTPUT = ROOT / 'output' / 'pdf' / 'puspamitra-mishra-profile.pdf'
 W, H = 612, 792
 INK, TEAL, MUTED, PALE = '#182f34', '#176761', '#52646b', '#eef4f2'
-WEB = 'https://puspmish3.github.io/my_profile/'
+WEB = 'https://myprofile.puspamitramishra.fyi/'
+AWS_BADGE = 'https://www.credly.com/badges/07dc9b54-49b2-461e-a9d6-54759287af67/public_url'
+CLAUDE_BADGE = 'https://www.credly.com/badges/764b629f-2a50-4570-b988-5cd7cc30ea04'
 
 
 def text(value, x, top, width, size=10, color=INK, bold=False, max_height=None):
@@ -64,8 +66,8 @@ def footer(number):
 
 
 def metric(value, label, x, top, width):
-    text(value, x, top, width, 21, TEAL, True)
-    text(label, x, top + 31, width - 5, 8, MUTED, max_height=24)
+    text(value, x, top, width, 20, TEAL, True)
+    text(label, x, top + 28, width - 4, 7.6, MUTED, max_height=34)
 
 
 def overview():
@@ -83,11 +85,13 @@ def overview():
          'insurance, healthcare, and life sciences. Connects architecture with executive delivery: '
          'scaling global teams, modernizing cloud and API platforms, and turning AI adoption into '
          'measurable business outcomes.', 36, 201, 540, 10, max_height=43)
-    box(36, 256, 540, 76)
-    for i, (v, label) in enumerate([('24+', 'Years in enterprise IT'), ('350+', 'Global engineering team'),
-                                   ('$47.8M', 'Reported annual AI benefit'), ('$6M', 'Annualized cloud savings')]):
-        metric(v, label, 48 + i * 132, 265, 122)
-    text('WORK EXPERIENCE', 36, 347, 540, 9, TEAL, True)
+    box(36, 252, 540, 86)
+    for i, (v, label) in enumerate([('24+', 'Years in leading, managing and transforming enterprise IT'),
+                                   ('350+', 'Engineers led during various transformation initiatives'),
+                                   ('$48M', 'Saved through AI-led transformations across industries'),
+                                   ('$6M', 'Cloud spend saved through modernization')]):
+        metric(v, label, 48 + i * 132, 260, 124)
+    text('WORK EXPERIENCE', 36, 352, 540, 9, TEAL, True)
     roles = [
         ('Aug 2024 - Present', 'Senior Engineering Leader', 'CVS Health / Aetna / McKesson, via TCS',
          'API platform modernization across Azure and GCP; APIC-to-Kong migration, millions of daily transactions, and observability supporting 99.99% availability.'),
@@ -98,7 +102,7 @@ def overview():
         ('Dec 2005 - Oct 2017', 'Solutions Architect / Senior Developer', 'Citibank, via TCS',
          'Led 35-50 developers on banking and mortgage integration; designed underwriting rules and modernized fees and pricing platforms.')]
     for i, (dates, role, org, summary) in enumerate(roles):
-        top = 368 + i * 64
+        top = 372 + i * 63
         text(dates, 36, top, 117, 8, MUTED)
         text(role, 163, top, 413, 10, INK, True)
         text(org, 163, top + 14, 413, 8, TEAL)
@@ -107,9 +111,11 @@ def overview():
     text('EDUCATION & PROFESSIONAL CREDENTIALS', 36, 643, 540, 9, TEAL, True)
     photo('claude-certified.png', 36, 665, 48, 48, crop=False)
     photo('aws-certified.png', 91, 665, 48, 48, crop=False)
+    c.linkURL(CLAUDE_BADGE, (36, H - 665 - 48, 36 + 48, H - 665), relative=0)
+    c.linkURL(AWS_BADGE, (91, H - 665 - 48, 91 + 48, H - 665), relative=0)
     text('<b>B.E., Electronics & Telecommunication</b> · Utkal University, India<br/>'
-         'Claude Certified Architect - Professional (2026)<br/>'
-         'TCS Generative AI Executive Level (2025) · AWS Solutions Architect - Associate (2024)<br/>'
+         f'<link href="{CLAUDE_BADGE}">Claude Certified Architect - Professional (2026)</link><br/>'
+         f'TCS Generative AI Executive Level (2025) · <link href="{AWS_BADGE}">AWS Solutions Architect - Associate (2024)</link><br/>'
          'Sun Certified Java Programmer (SCJP - SE 5.0)', 153, 665, 423, 8.2, max_height=55)
     footer(1)
 
