@@ -33,9 +33,10 @@ assert 'https://puspmish3.github.io/' not in '\n'.join(uris), 'Old GitHub Pages 
 assert 'https://www.credly.com/badges/07dc9b54-49b2-461e-a9d6-54759287af67/public_url' in uris
 assert 'https://www.credly.com/badges/764b629f-2a50-4570-b988-5cd7cc30ea04' in uris
 normalized = ' '.join(content.split())
-assert '$48M' in normalized and 'Saved through AI-led transformation' in normalized
+assert '$48M' in normalized and 'Saved through AI-led transformations across industries' in normalized
 assert 'Cloud spend saved through modernization' in normalized
-assert 'Engineers led through transformation' in normalized
+assert 'Engineers led during various transformation initiatives' in normalized
+assert 'Years in leading, managing and transforming enterprise IT' in normalized
 out = ROOT / 'qa' / 'pdf'
 out.mkdir(parents=True, exist_ok=True)
 doc = pymupdf.open(profile)
