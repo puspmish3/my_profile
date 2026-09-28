@@ -40,8 +40,11 @@ hits = page.search_for('LinkedIn')
 assert hits, 'LinkedIn text not found'
 for hit in hits:
     links = [link for link in page.get_links() if pymupdf.Rect(link['from']).intersects(hit)]
-    assert links, 'LinkedIn text has no link'
-    assert all(link.get('uri') == linkedin for link in links), links
+    assert len(links) == 1, links
+    assert links[0].get('uri') == linkedin, links
+    others = [link for link in page.get_links()
+              if link.get('uri') != linkedin and pymupdf.Rect(link['from']).intersects(hit)]
+    assert not others, others
 normalized = ' '.join(content.split())
 assert '$48M' in normalized and 'Saved through AI-led transformations across industries' in normalized
 assert 'Cloud spend saved through modernization' in normalized

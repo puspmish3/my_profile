@@ -77,11 +77,11 @@ def overview():
     text('Puspamitra Mishra', 36, 49, 420, 29, INK, True)
     text('Engineering leadership. Applied AI. Enterprise impact.', 36, 94, 408, 11, MUTED)
     text('Dallas, USA · +1 (469) 955-4740<br/>'
-         '<link href="mailto:puspamitra.mishra@gmail.com">puspamitra.mishra@gmail.com</link><br/>'
-         '<link href="https://www.linkedin.com/in/puspamitra-mishra-6b186b29/">LinkedIn</link>'
-         f' · <link href="{WEB}">Project portfolio</link>', 36, 118, 410, 9, MUTED)
+         '<link href="mailto:puspamitra.mishra@gmail.com"><u>puspamitra.mishra@gmail.com</u></link><br/>'
+         '<link href="https://www.linkedin.com/in/puspamitra-mishra-6b186b29/"><u>LinkedIn</u></link><br/>'
+         f'<link href="{WEB}"><u>Project portfolio</u></link>', 36, 112, 410, 9, MUTED)
     photo('portrait.png', 471, 29, 105, 130)
-    text('PROFILE SUMMARY', 36, 183, 540, 9, TEAL, True)
+    text('PROFILE SUMMARY', 36, 190, 540, 9, TEAL, True)
     text('Enterprise solutions architect and senior engineering leader with 24+ years across banking, '
          'insurance, healthcare, and life sciences. Connects architecture with executive delivery: '
          'scaling global teams, modernizing cloud and API platforms, and turning AI adoption into '
