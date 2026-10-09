@@ -23,3 +23,12 @@
   .hero .actions{grid-row:7;justify-content:center;gap:15px 20px;margin:22px 0 0}
 }
 @media(max-width:720px){html:not(.js) .header{height:auto;flex-wrap:wrap;padding:18px 0}html:not(.js) .menu{display:none}html:not(.js) .nav{display:flex;position:static;flex-wrap:wrap;box-shadow:none;border:0;padding:0}}
+
+html:not([data-theme="day"]) .hero .actions .button{
+  background:#f4b75e;
+  color:#142725;
+  box-shadow:0 8px 24px #0005;
+}
+html:not([data-theme="day"]) .hero .actions .button:hover{
+  background:#ffd18b;
+}

@@ -73,51 +73,55 @@ def metric(value, label, x, top, width):
 
 def overview():
     box(0, 0, W, 8, TEAL)
-    text('ENTERPRISE SOLUTIONS ARCHITECT', 36, 29, 420, 9, TEAL, True)
+    text('SENIOR ENGINEERING LEADER', 36, 29, 420, 9, TEAL, True)
     text('Puspamitra Mishra', 36, 49, 420, 29, INK, True)
-    text('Engineering leadership. Applied AI. Enterprise impact.', 36, 94, 408, 11, MUTED)
-    text('Dallas, USA · +1 (469) 955-4740<br/>'
+    text('Cloud transformation. API platforms. Enterprise AI.', 36, 94, 408, 11, MUTED)
+    text('Dallas, TX · +1 (469) 955-4740<br/>'
          '<link href="mailto:puspamitra.mishra@gmail.com"><u>puspamitra.mishra@gmail.com</u></link><br/>'
          '<link href="https://www.linkedin.com/in/puspamitra-mishra-6b186b29/"><u>LinkedIn</u></link><br/>'
          f'<link href="{WEB}"><u>Project portfolio</u></link>', 36, 112, 410, 9, MUTED)
     photo('portrait.png', 471, 29, 105, 130)
     text('PROFILE SUMMARY', 36, 190, 540, 9, TEAL, True)
-    text('Enterprise solutions architect and senior engineering leader with 24+ years across banking, '
-         'insurance, healthcare, and life sciences. Connects architecture with executive delivery: '
-         'scaling global teams, modernizing cloud and API platforms, and turning AI adoption into '
-         'measurable business outcomes.', 36, 201, 540, 10, max_height=43)
+    text('Senior engineering leader with 24+ years across healthcare, insurance, banking, and life '
+         'sciences. Leads global teams of 350+ through cloud migration, API modernization, and '
+         'enterprise AI adoption. Delivered $6M+ in annualized cloud savings and eliminated '
+         'approximately $1M a year in legacy licensing.', 36, 201, 540, 10, max_height=43)
     box(36, 252, 540, 86)
     for i, (v, label) in enumerate([('24+', 'Years in leading, managing and transforming enterprise IT'),
                                    ('350+', 'Engineers led during various transformation initiatives'),
                                    ('$48M', 'Saved through AI-led transformations across industries'),
-                                   ('$6M', 'Cloud spend saved through modernization')]):
+                                   ('$6M+', 'Annualized cloud savings from modernization')]):
         metric(v, label, 48 + i * 132, 260, 124)
     text('WORK EXPERIENCE', 36, 352, 540, 9, TEAL, True)
     roles = [
-        ('Aug 2024 - Present', 'Senior Engineering Leader', 'CVS Health / Aetna / McKesson, via TCS',
-         'API platform modernization across Azure and GCP; APIC-to-Kong migration, millions of daily transactions, and observability supporting 99.99% availability.'),
-        ('Mar 2021 - Jul 2024', 'Senior Engineering Leader', 'MetLife, via TCS',
-         'Led 350+ engineers. GCP-to-Azure optimization saved ~$500K/month; integration modernization eliminated ~$1M/year in ACE licensing and cut maintenance 30%.'),
+        ('Sep 2025 - Present', 'Senior Engineering Leader - API Platforms', 'CVS Health / Aetna, via TCS',
+         'Leads APIC-to-Kong migration and high-throughput API platforms across Azure and GCP; observability sustains 99.99% availability.'),
+        ('Aug 2024 - Aug 2025', 'Senior Engineering Leader - Cloud Migration', 'McKesson, via TCS',
+         'Directed GCP-to-Azure migration and optimization, saving ~$500K/month ($6M annualized) through a Microsoft-funded program.'),
+        ('Mar 2021 - Jul 2024', 'Senior Engineering Leader - Modernization & AI', 'MetLife, via TCS',
+         'Led 350+ engineers; Azure microservices eliminated ~$1M/year in ACE licensing and reduced maintenance overhead 30%.'),
         ('Feb 2017 - Feb 2021', 'Senior Engineering Manager', 'Citigroup, via TCS',
-         'Migrated core Java banking systems to Spring Boot microservices on PCF, AWS, and OpenShift; governed releases and critical payment applications.'),
+         'Migrated core banking to Spring Boot microservices on PCF, AWS, and OpenShift; governed releases and payments.'),
         ('Dec 2005 - Oct 2017', 'Solutions Architect / Senior Developer', 'Citibank, via TCS',
-         'Led 35-50 developers on banking and mortgage integration; designed underwriting rules and modernized fees and pricing platforms.')]
+         'Led 35-50 developers; designed mortgage underwriting rules and modernized fees and pricing platforms.')]
     for i, (dates, role, org, summary) in enumerate(roles):
-        top = 372 + i * 63
-        text(dates, 36, top, 117, 8, MUTED)
-        text(role, 163, top, 413, 10, INK, True)
-        text(org, 163, top + 14, 413, 8, TEAL)
-        text(summary, 163, top + 27, 413, 8.6, max_height=35)
-    box(36, 633, 540, 1, '#d8e3e0')
-    text('EDUCATION & PROFESSIONAL CREDENTIALS', 36, 643, 540, 9, TEAL, True)
-    photo('claude-certified.png', 36, 665, 48, 48, crop=False)
-    photo('aws-certified.png', 91, 665, 48, 48, crop=False)
-    c.linkURL(CLAUDE_BADGE, (36, H - 665 - 48, 36 + 48, H - 665), relative=0)
-    c.linkURL(AWS_BADGE, (91, H - 665 - 48, 91 + 48, H - 665), relative=0)
+        top = 368 + i * 49
+        text(dates, 36, top, 117, 7.5, MUTED)
+        text(role, 163, top, 413, 9, INK, True)
+        text(org, 163, top + 12, 413, 7.5, TEAL)
+        text(summary, 163, top + 23, 413, 8.1, max_height=23)
+    text('Earlier: Senior Developer at Satyam Computers (2004) and Algorithm Computers (2002-2004).',
+         36, 616, 540, 7.6, MUTED, max_height=12)
+    box(36, 639, 540, 1, '#d8e3e0')
+    text('EDUCATION & PROFESSIONAL CREDENTIALS', 36, 648, 540, 9, TEAL, True)
+    photo('claude-certified.png', 36, 669, 48, 48, crop=False)
+    photo('aws-certified.png', 91, 669, 48, 48, crop=False)
+    c.linkURL(CLAUDE_BADGE, (36, H - 669 - 48, 36 + 48, H - 669), relative=0)
+    c.linkURL(AWS_BADGE, (91, H - 669 - 48, 91 + 48, H - 669), relative=0)
     text('<b>B.E., Electronics & Telecommunication</b> · Utkal University, India<br/>'
          f'<link href="{CLAUDE_BADGE}">Claude Certified Architect - Professional (2026)</link><br/>'
          f'TCS Generative AI Executive Level (2025) · <link href="{AWS_BADGE}">AWS Solutions Architect - Associate (2024)</link><br/>'
-         'Sun Certified Java Programmer (SCJP - SE 5.0)', 153, 665, 423, 8.2, max_height=55)
+         'Sun Certified Java Programmer (SCJP - SE 5.0)', 153, 669, 423, 8.2, max_height=55)
     footer(1)
 
 

@@ -1,4 +1,4 @@
-# Puspamitra Mishra — Enterprise Solutions Architect
+# Puspamitra Mishra — Senior Engineering Leader
 
 A responsive, static portfolio with four dedicated enterprise AI case studies. Designed for free GitHub Pages hosting. No framework, paid service, build dependency, or backend is needed to serve the site.
 
@@ -39,7 +39,7 @@ The site uses relative links and works both at a domain root and under a reposit
 
 ## Content notes
 
-Profile and career details come from the supplied professional profile; AI project descriptions and metrics come from `Project_Highlights_Summary.docx`. No client identities have been inferred for the four AI projects. Career dates are preserved, including the overlapping 2017 roles. Conceptual workflow graphics illustrate the supplied descriptions rather than asserting implementation details not in the source. Confirm any changes to current-role dates and reported outcomes before future updates.
+Profile and career details come from `Puspamitra_Mishra_Resume.docx`; AI project descriptions and metrics come from the supplied project highlights. No client identities have been inferred for the four AI projects. Career dates are preserved as stated in the resume, including the overlapping 2017 roles. Conceptual workflow graphics illustrate the supplied descriptions rather than asserting implementation details not in the source. Confirm any changes to current-role dates and reported outcomes before future updates.
 
 The downloadable profile is a designed, three-page PDF with a portrait, career summary, certification badges, education and credentials, and four illustrated AI project summaries with conceptual workflows. Both profile links download `Puspamitra-Mishra-Profile.pdf`. Contact details and credentials are drawn from the supplied professional profile; no additional licenses are asserted.
 
