@@ -11,7 +11,7 @@ profile = ROOT / 'site/assets/puspamitra-mishra-profile.pdf'
 reader = PdfReader(profile)
 assert len(reader.pages) == 3
 content = '\n'.join(page.extract_text() for page in reader.pages)
-for expected in ['Puspamitra Mishra', 'MetLife', 'Citigroup', 'Citibank', 'CVS Health', 'McKesson',
+for expected in ['Puspamitra Mishra', 'MetLife', 'Citigroup', 'Citibank', 'CVS Health', 'McKesson', 'RS Software',
                  'Sep 2025 - Present', 'Aug 2024 - Aug 2025',
                  'Utkal University', 'Claude Certified', 'TCS Generative AI', 'AWS Solutions',
                  'Sun Certified', '$3.8M', '$15.0M', '$14.3M', '$14.7M', 'CONCEPTUAL WORKFLOW']:

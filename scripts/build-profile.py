@@ -110,7 +110,7 @@ def overview():
         text(role, 163, top, 413, 9, INK, True)
         text(org, 163, top + 12, 413, 7.5, TEAL)
         text(summary, 163, top + 23, 413, 8.1, max_height=23)
-    text('Earlier: Senior Developer at Satyam Computers (2004) and Algorithm Computers (2002-2004).',
+    text('Earlier: Senior Developer at RS Software (2004-05), Satyam Computers (2004), and Algorithm Computers (2002-04).',
          36, 616, 540, 7.6, MUTED, max_height=12)
     box(36, 639, 540, 1, '#d8e3e0')
     text('EDUCATION & PROFESSIONAL CREDENTIALS', 36, 648, 540, 9, TEAL, True)
